@@ -13,15 +13,25 @@
     <form>
       <input type="text" class="txt" name="item" placeholder="Life goal.." [(ngModel)]="goalText">
       <br><span>{{ goalText }}</span><br>
-      <input type="submit" class="btn" value="{{ btnText }}">
-      <input type="submit" class="btn {{a}}" value="{{ btnText2 }}">
+      <input type="submit" class="btn" value="{{ btnText }}" (click)="addItem()">
+      <input type="submit" class="btn {{a}}" value="{{ btnText2 }}" >
       <input type="text" class="txt b" name="item" placeholder="Life goal.." [(ngModel)]="goalText">
       <input type="submit" class="btn c" value="{{ goalText }}">
     </form>
   </div>
   <div class="col">
-    <p class="life-container">
-      I want to climb a mountain
+    <p class="life-container" *ngFor="let goal of goals">
+     {{goal}}
     </p>
   </div>
 </div>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12">
+      <form>
+        <input type="text" class="txt" name="item" placeholder="Life goal.." [(ngModel)]="textoPrac">
+        <input type="submit" class="btn"
+      </form>
+    </div>
+  </div>
